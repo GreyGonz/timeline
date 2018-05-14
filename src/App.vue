@@ -6,7 +6,7 @@
       app
     >
       <v-list dense>
-        <v-list-tile @click="redirect('/#/tasks/timeline')">
+        <v-list-tile @click="redirect('/tasks/timeline')">
           <v-list-tile-action>
             <v-icon>home</v-icon>
           </v-list-tile-action>
@@ -14,7 +14,7 @@
             <v-list-tile-title>Timeline</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="redirect('/#/counter')">
+        <v-list-tile @click="redirect('/counter')">
           <v-list-tile-action>
             <v-icon>contact_mail</v-icon>
           </v-list-tile-action>
@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     redirect (route) {
-      window.location = route
+      this.$router.push({ path: route })
     }
   }
 }
